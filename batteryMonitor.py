@@ -14,9 +14,11 @@ while True:
 	if plugged == False and percent <= BATTERY_LOWER_LIMIT:
 		winsound.PlaySound('sound.wav', winsound.SND_FILENAME)
 		print("\nPLUG IN YOUR LAPTOP   |   " + str(percent) + '%' + ' '*10)
+		mins = 0
 	elif plugged == True and percent >= BATTERY_UPPER_LIMIT:
 		winsound.PlaySound('sound.wav', winsound.SND_FILENAME)
 		print("\nUNPLUG NOW   |   "  + str(percent) + '%' + ' '*10)
+		mins = 0
 	else:
 		if plugged == True:
 			print ('\r' + str(mins) + ' minutes since plugged in.' + ' '*5),
